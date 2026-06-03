@@ -8,8 +8,6 @@ class LogEntry(BaseModel):
     title: str = Field(..., max_length=500, description="Краткий заголовок")
     message: str = Field(..., max_length=20000, description="Полное сообщение")
     level: str = Field(default="error", description="Уровень: error, warning, info, debug")
-    
-    # ... остальные поля без изменений ...
     section: Optional[str] = Field(None, max_length=200)
     url: Optional[str] = Field(None, max_length=2000)
     referrer: Optional[str] = Field(None, alias="previous_url", max_length=2000)
