@@ -1,0 +1,8 @@
+import os
+
+LOGS_BASE_DIR = "logs"
+RETENTION_DAYS = 7
+GLOBAL_MAX_LOGS_PER_SECOND = int(os.getenv("GLOBAL_MAX_LOGS_PER_SECOND", "100"))
+MAX_LOGS_PER_MINUTE_PER_SERVICE = int(os.getenv("MAX_LOGS_PER_MINUTE_PER_SERVICE", "1000"))
+API_KEY = os.getenv("LOGGING_API_KEY", "secret-dev-key")
+
