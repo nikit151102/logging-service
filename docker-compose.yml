@@ -11,7 +11,6 @@ services:
       - LOG_LEVEL=INFO
     restart: unless-stopped
     networks:
-      - database_authhub
       - common
 
 networks:
