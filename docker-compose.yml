@@ -4,7 +4,7 @@ services:
   logging-service:
     build: .
     ports:
-      - 6410:6410"
+      - 6410:6410
     volumes:
       - /home/user/backups/infrastructure/logging:/app/logs
     environment:
