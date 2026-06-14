@@ -9,6 +9,6 @@ COPY . .
 
 RUN mkdir -p logs
 
-EXPOSE 8000
+EXPOSE 6410
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "6410", "--reload"]
