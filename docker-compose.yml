@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   logging-service:
+    container_name: logging-service
     build: .
     ports:
       - 6410:6410
