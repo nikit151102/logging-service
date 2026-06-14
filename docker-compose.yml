@@ -6,7 +6,14 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./logs:/app/logs
+      - /home/user/backups/infrastructure/logging:/app/logs
     environment:
       - LOG_LEVEL=INFO
     restart: unless-stopped
+    networks:
+      - database_authhub
+      - common
+
+networks:
+  common:
+    external: true
